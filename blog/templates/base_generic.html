@@ -59,8 +59,9 @@
                         <li><a href="{% url 'index' %}" class="current">Home</a></li>
                         {% if user.is_authenticated %}
                         <li><a href="{% url 'post_create' %}">New Content</a></li>
+                        <li><a href="{% url 'logout' %}">로그아웃</a></li>
                         {% else %}
-                        <li><a href="/admin">로그인</a></li>
+                        <li><a href="{% url 'login' %}">로그인</a></li>
                         {% endif %}
                         
                     </ul>
