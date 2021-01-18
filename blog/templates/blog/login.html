@@ -1,4 +1,17 @@
 
+
+
+{% load static %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="shortcut icon" href="{% static 'images/favicon.png' %}" />
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700%7CLibre+Baskerville:400,400italic,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css"  href='{% static "css/clear.css" %}' />
+<link rel="stylesheet" type="text/css"  href='{% static "css/common.css" %}' />
+<link rel="stylesheet" type="text/css"  href='{% static "css/font-awesome.min.css" %}' />
+<link rel="stylesheet" type="text/css"  href='{% static "css/carouFredSel.css" %}' />
+<link rel="stylesheet" type="text/css"  href='{% static "css/sm-clean.css" %}' />
+<link rel="stylesheet" type="text/css"  href='{% static "css/style.css" %}' />
+
 {% block content %}
 <div class="container my-3">
     <form method="post" class="post-form" action="{% url 'login' %}">
@@ -18,3 +31,13 @@
     </form>
 </div>
 {% endblock %}
+
+<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+<script type='text/javascript' src='{% static "js/imagesloaded.pkgd.js" %}'></script>
+<script type='text/javascript' src='{% static "js/jquery.nicescroll.min.js" %}'></script>
+<script type='text/javascript' src='{% static "js/jquery.smartmenus.min.js" %}'></script>
+<script type='text/javascript' src='{% static "js/jquery.carouFredSel-6.0.0-packed.js" %}'></script>
+<script type='text/javascript' src='{% static "js/jquery.mousewheel.min.js" %}'></script>
+<script type='text/javascript' src='{% static "js/jquery.touchSwipe.min.js" %}'></script>
+<script type='text/javascript' src='{% static "js/jquery.easing.1.3.js" %}'></script>
+<script type='text/javascript' src='{% static "js/main.js" %}'></script>
