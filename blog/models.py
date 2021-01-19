@@ -19,7 +19,7 @@ class Post(models.Model):
     createDate = models.DateTimeField(auto_now_add=True)
     updateDate = models.DateTimeField(auto_now_add=True)
     category = models.ManyToManyField(Category, help_text="글의 분류를 작성하세요.")
-
+    
     def __str__(self):
         return self.title
     

@@ -2,6 +2,7 @@
 {% block contact %}
 {% load static %}
         <!-- Single Content -->
+
         <div id="content" class="site-content center-relative">
             <div class="single-post-wrapper content-1070 center-relative">
                 <article class="center-relative">
@@ -21,12 +22,13 @@
                                 </a></li>
                             </ul>
                         </div>
+                   
+                        <div class="entry-date published">{{ post.createDate }}</div>
                         {% if post.title_image %}
                         <div calss="post-full-width">
                             <img src="{{ post.title_image.url }}" alt="">
                         </div>
                         {% endif %}
-                        <div class="entry-date published">{{ post.createDate }}</div>
                         <div class="clear"></div>
                     </div>
 
@@ -36,6 +38,22 @@
                             <div class="clear"></div>
                         </div>
                     </div>
+
+                    <br>
+                    <br>
+
+                    {% if user.is_authenticated %}
+                    <div class="entry-content">
+                        <div class="content-wrap content-660 center-relative">
+                            <div class="delete">
+                                <p><a href="{% url 'delete' post.id %}"
+                                class="btn btn-sm btn-outline-secondary">삭제</a></p>  
+                            </div>
+                        </div>
+                    </div>
+                    {% else %}
+                    {% endif %}
+
                     <div class="clear"></div>
                 </article>
             </div>

@@ -25,11 +25,7 @@
                                             </li>
                                         </ul>
                                     </div>
-
-                                   
-                                    
                                     <div class="entry-date published">{{ post.createDate }}</div>
-                                    <article class="center-relative">
                                     <h2 class="entry-title">
                                         <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
                                     </h2>
@@ -42,22 +38,16 @@
                                        <a class="read-more" href="{{ post.get_absolute_url }}"></a>
                                     </div>
                                     <div class="clear"></div>
-                                    </article>
                                 </div>
                             </div>
                         </article>
                         {% else %}
-
-                       
-            
-                        
                         <article id="post-{{ forloop.counter }}" class="blog-item-holder">
                             <div class="entry-content relative">
-                                <div class="content-660 center-relative">
-                                <article class="center-relative">
-                                    <h1 class="entry-title">
-                                    <a href="{{ post.get_absolute_url }}">{{ post.title }} </a>
-                                    </h1>
+                                <div class="content-1170 center-relative">
+                                    <h2 class="entry-title">
+                                        <a href="{{ post.get_absolute_url }}">{{ post.title }} </a>
+                                    </h2>
                                     <div class="cat-links">
                                         <ul>
                                             <li>
@@ -74,7 +64,6 @@
                                     </div>
                                     <div class="entry-date published">{{ post.createDate }}</div>
                                     <div class="clear"></div>
-                                </article>
                                 </div>
                             </div>
                         </article>
@@ -82,8 +71,7 @@
                     {% endfor %}
                 </div>
                 <div class="clear"></div>
-                <div class="block load-more-holder"><a href="{% url 'list' %}">Load MORE RETRIES</a></div>
-
+               
             </div>
 
             <div class="featured-image-holder">
@@ -92,5 +80,4 @@
             </div>
             <div class="clear"></div>
         </div>
-        
 {% endblock %}
