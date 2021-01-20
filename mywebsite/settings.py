@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
     'widget_tweaks',
+    'imagekit',
 
 ]
 
@@ -134,3 +135,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 POST_LOGOUT = '/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+

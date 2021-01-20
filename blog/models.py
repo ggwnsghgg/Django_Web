@@ -1,5 +1,7 @@
 from django.db import models
 from django.urls import reverse
+
+
 # Create your models here.
 
 # 글의 분류 (일상, 정보, 공부)
@@ -15,6 +17,8 @@ class Category(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length=200)
     title_image = models.ImageField(blank=True)
+    title_image2 = models.ImageField(blank=True)
+    title_image3 = models.ImageField(blank=True)
     content = models.TextField()
     createDate = models.DateTimeField(auto_now_add=True)
     updateDate = models.DateTimeField(auto_now_add=True)
