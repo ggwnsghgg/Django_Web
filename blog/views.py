@@ -11,7 +11,9 @@ from django.contrib import messages
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
-from django.utils import timezone
+from django.utils import timezone 
+from .form import BlogUpdate
+from .models import Post
 
 # Create your views here.
 def index(req):
@@ -36,7 +38,23 @@ def delete(request, post_id):
     return redirect('/')
 
 
+def edit(request,post_id):
+    blog = Post.objects.get(id=post_id)
 
+    if request.method == 'POST':
+        form = BlogUpdate(request.POST)
+        if form.is_valid():
+            blog.title = form.cleaned_data['title']
+            blog.image = form.changed_data('title_image')
+            blog.content = form.cleaned_data['content']
+            # blog.category = form.changed_data['category']
+            blog.put_date = timezone.datetime.now()
+            blog.save()
+            return redirect('/')
+    else:
+        form = BlogUpdate(instance = blog)
+        return render(request, 'blog/post_edit.html/', {'form':form})
+        
 class PostDetailView(generic.DetailView):
     model = Post
 

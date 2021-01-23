@@ -28,7 +28,6 @@
 
 
     <body class="single-post">
-
         <!-- Preloader Gif -->
         <table class="doc-loader">
             <tbody>
@@ -160,11 +159,17 @@
                                         <p><a href="{% url 'delete' post.id %}"
                                         class="btn btn-sm btn-outline-secondary">삭제</a></p>  
                                     </div>
+
+                                    <div class="edit">
+                                        <p><a href="{% url 'edit' post.id %}"
+                                        class="btn btn-sm btn-outline-secondary">수정</a></p>  
+                                    </div>
                                 </div>
                             </div>
                             {% else %}
                             {% endif %}
             
+                            
                             <div class="clear"></div>
                         </article>
                     </div>
