@@ -130,11 +130,14 @@
                                 var slider1_pagination = "true";
                                 var slider1_hover = "true";
                             </script>
-                            
-                                <div class="content-660 center-relative">
-                                    <img src="{{ post.title_image.url }}" alt="">
-                                    <img src="{{ post.title_image2.url }}" alt="">
-                                    <img src="{{ post.title_image3.url }}" alt="">
+                            <div class="image-slider-wrapper">
+                                <div class="caroufredsel_wrapper">
+                                    <div class="content-660 center-relative">
+                                        <ul id="slider1" class="image-slider slides center-text">
+                                        <li><img src="{{ post.title_image.url }}" alt=""></li>
+                                        <li><img src="{{ post.title_image2.url }}" alt=""></li>
+                                        <li><img src="{{ post.title_image3.url }}" alt=""></li>
+                                        </ul>
                                 </div>
                         </div>
                         
