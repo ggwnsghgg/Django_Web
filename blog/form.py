@@ -7,7 +7,7 @@ from django.db import models
 class BlogUpdate(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ["title", "title_image","content", "category"]
+        fields = ["title", "title_image","title_image2","title_image3","content", "category"]
 
 
 # class BlogUpdate(models.Model):

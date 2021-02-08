@@ -60,6 +60,6 @@ class PostDetailView(generic.DetailView):
 
 class PostCreate(LoginRequiredMixin, CreateView):
     model = Post
-    fields = ["title", "title_image","content", "category"]
+    fields = ["title", "title_image","title_image2","title_image3","content", "category"]
 
 
