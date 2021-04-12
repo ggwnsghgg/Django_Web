@@ -7,3 +7,4 @@
 - IDE : vscode
 - WEB : Django
 - Programming Language : Python 3.8.3   
+- AWS Lightsail
