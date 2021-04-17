@@ -121,9 +121,11 @@
                             </div>
                             <div class="entry-date published">{{ post.createDate }}</div>
                         </div>
-                                <!-- 이미지 파일 영역-->
-                                {% if post.title_image %}
-                        <div class="entry-content">
+
+
+                            <!-- 이미지 파일 영역-->
+                            {% if post.title_image %}
+                        <div class="entry-content"> 
                             <script>
                                 var slider1_speed = "500";
                                 var slider1_auto = "true";
@@ -133,11 +135,13 @@
                             <div class="image-slider-wrapper">
                                 <div class="caroufredsel_wrapper">
                                     <div class="content-660 center-relative">
-                                        <ul id="slider1" class="image-slider slides center-text">
-                                        <li><img src="{{ post.title_image.url }}" alt=""></li>
-                                        <li><img src="{{ post.title_image2.url }}" alt=""></li>
-                                        <li><img src="{{ post.title_image3.url }}" alt=""></li>
-                                        </ul>
+                                    <ul id="slider1" class="image-slider slides center-text">
+                                    
+                                    <li><img src="{{ post.title_image.url }}" alt=""></li>
+                                    <li><img src="{{ post.title_image2.url }}" alt=""></li>
+                                    <li><img src="{{ post.title_image3.url }}" alt=""></li>
+
+                                    </ul>
                                 </div>
                                 <div class="slider1_pagination carousel_pagination left"></div>
                                 <div class="clear"></div>

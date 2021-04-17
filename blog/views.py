@@ -38,19 +38,25 @@ def delete(request, post_id):
     return redirect('/')
 
 
+
 def edit(request,post_id):
     blog = Post.objects.get(id=post_id)
 
     if request.method == 'POST':
-        form = BlogUpdate(request.POST)
-        if form.is_valid():
+        form = BlogUpdate(request.POST, request.FILES)
+        if form.is_valid(): 
+            print(form.cleaned_data)
             blog.title = form.cleaned_data['title']
-            blog.image = form.changed_data('title_image')
+            blog.title_image = form.cleaned_data['title_image']
+            blog.title_image2 = form.cleaned_data['title_image2']
+            blog.title_image3 = form.cleaned_data['title_image3']
+            # blog.category = form.cleaned_data['category']
             blog.content = form.cleaned_data['content']
-            # blog.category = form.changed_data['category']
-            blog.put_date = timezone.datetime.now()
             blog.save()
+            blog.put_date = timezone.datetime.now()
+            messages.success(request, "수정되었습니다.")
             return redirect('/')
+
     else:
         form = BlogUpdate(instance = blog)
         return render(request, 'blog/post_edit.html/', {'form':form})
